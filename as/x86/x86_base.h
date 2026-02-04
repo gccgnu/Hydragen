@@ -9,6 +9,13 @@ u8 rex(int w, int r, int x, int b);
 u8 modrm(u8 mod, u8 reg, u8 rm);
 u8 sib(u8 scale, u8 index, u8 base);
 
+int emit_u8(u8* out, u8 v);
+
+int imm8(u8* out, u8 v);
 int imm16(u8* out, u16 v);
 int imm32(u8* out, u32 v);
 int imm64(u8* out, u64 v);
+
+/* Displacements */
+int disp8(u8* out, u8 v);
+int disp32(u8* out, u32 v);
