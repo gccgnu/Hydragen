@@ -49,12 +49,13 @@ main(int argc, char *argv[])
 	labels_update(labels, "loop", 0x0020);
     
 	/* Debug output */
+	printf("Before removing:\n");
 	labels_debug_print(labels);
-    
-	/* Remove label */
+
 	labels_remove(labels, "data_section");
-    
-	printf("Total labels: %zu\n", labels_count(labels));
+
+	printf("After removing:\n");
+	labels_debug_print(labels);
     
 	/* Free label */
 	labels_free(labels);
