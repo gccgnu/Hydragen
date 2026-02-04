@@ -8,6 +8,6 @@ file(GLOB_RECURSE SOURCES "as/*.c")
 
 add_executable(as ${SOURCES})
 
-target_include_directories(hydragen PRIVATE 
+target_include_directories(as PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/as
 )
